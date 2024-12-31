@@ -1,5 +1,4 @@
 import { BookOpen, Users, MessageSquare, BookMarked, Download, Sparkles } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 
 export const FeatureShowcase = () => {
   return (
@@ -95,18 +94,6 @@ export const FeatureShowcase = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <Card className="bg-secondary/50 border-none">
-          <CardContent className="p-8 text-center">
-            <h3 className="text-2xl font-semibold mb-4">
-              Join the Growing Community
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Be part of Tribhuvan University's digital transformation. Access comprehensive 
-              study materials, connect with peers, and enhance your academic journey with Shadanda.
-            </p>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );

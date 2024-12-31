@@ -1,53 +1,29 @@
-import React, { useState } from 'react';
-import { Mail, Github } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+
+// import { Mail, Github } from 'lucide-react';
+// import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+// import { Button } from '@/components/ui/button';
+// import { Input } from '@/components/ui/input';
+// import { Textarea } from '@/components/ui/textarea';
+// import { Alert, AlertDescription } from '@/components/ui/alert';
 import DownloadSection from '@/components/community/DownloadSection';
+import FAQSection from '@/components/community/FAQAndContact';
 
 
 
   
 
 const FeedbackPage = () => {
-  const [email, setEmail] = useState<string>('');
-  const [issue, setIssue] = useState<string>('');
-  const [issues, setIssues] = useState([
-    { id: 1, title: 'Initial Setup Issues', status: 'open', date: '2024-03-15' },
-    { id: 2, title: 'Dark Mode Toggle', status: 'resolved', date: '2024-03-14' }
-  ]);
-  const [isSubscribed, setIsSubscribed] = useState(false);
 
-// For email submission
-const handleEmailSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    localStorage.setItem('userEmail', email);
-    setIsSubscribed(true);
-  };
-  
-  // For issue submission
-  const handleIssueSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const newIssue = {
-      id: issues.length + 1,
-      title: issue,
-      status: 'open',
-      date: new Date().toISOString().split('T')[0]
-    };
-    setIssues([...issues, newIssue]);
-    setIssue('');
-  };
   return (
     <div className="min-h-screen bg-background p-4 md:p-8 space-y-8">
       {/* Download Section */}
 
       <DownloadSection />
+      <FAQSection />
      
 
       {/* Email Subscription */}
-      <Card className="w-full max-w-6xl mx-auto">
+      {/* <Card className="w-full max-w-6xl mx-auto">
         <CardHeader>
           <CardTitle>Stay Updated</CardTitle>
         </CardHeader>
@@ -74,10 +50,10 @@ const handleEmailSubmit = (e: React.FormEvent<HTMLFormElement>) => {
             </Alert>
           )}
         </CardContent>
-      </Card>
+      </Card> */}
 
       {/* Submit Issue Section */}
-      <Card className="w-full max-w-6xl mx-auto">
+      {/* <Card className="w-full max-w-6xl mx-auto">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Github className="w-6 h-6" />
@@ -98,10 +74,10 @@ const handleEmailSubmit = (e: React.FormEvent<HTMLFormElement>) => {
             </div>
           </form>
         </CardContent>
-      </Card>
+      </Card> */}
 
       {/* Contact Section */}
-      <Card className="w-full max-w-6xl mx-auto">
+      {/* <Card className="w-full max-w-6xl mx-auto">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Mail className="w-6 h-6" />
@@ -124,10 +100,10 @@ const handleEmailSubmit = (e: React.FormEvent<HTMLFormElement>) => {
             </Button>
           </div>
         </CardContent>
-      </Card>
+      </Card> */}
 
       {/* Issues List */}
-      <Card className="w-full max-w-6xl mx-auto">
+      {/* <Card className="w-full max-w-6xl mx-auto">
         <CardHeader>
           <CardTitle>Recent Issues</CardTitle>
         </CardHeader>
@@ -154,7 +130,7 @@ const handleEmailSubmit = (e: React.FormEvent<HTMLFormElement>) => {
             ))}
           </div>
         </CardContent>
-      </Card>
+      </Card> */}
     </div>
   );
 };
