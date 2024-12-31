@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useNavigate } from "react-router";
 
 export const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full min-h-[80vh] bg-background flex items-center justify-center p-4 md:p-8">
       <div className="absolute inset-0 bg-grid-white/10" />
@@ -30,7 +32,9 @@ export const HeroSection = () => {
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                  onClick={() => window.location.href = '/community'}
+                  onClick={() => {
+                    navigate("/community");
+                  }}
                 >
                   Explore Community
                 </Button>
