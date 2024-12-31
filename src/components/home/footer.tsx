@@ -65,12 +65,12 @@ export const Footer = () => {
             <h3 className="font-semibold text-lg">Connect</h3>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" className="hover:text-foreground" asChild>
-                <a href="https://github.com/YourUsername" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/DeepeshKalura" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="hover:text-foreground" asChild>
-                <a href="mailto:contact@shadanda.com">
+                <a href="mailto:deepeshkalurs@gmail.com">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
