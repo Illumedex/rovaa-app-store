@@ -27,6 +27,7 @@ export const HeroSection = () => {
               <Button 
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
+                onClick={() => window.location.href = '/community'}
               >
                 Explore Community
               </Button>

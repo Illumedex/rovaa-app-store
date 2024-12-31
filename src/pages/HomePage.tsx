@@ -1,20 +1,23 @@
 
 // import { Button } from "@/components/ui/button";
 // import { Card, CardContent } from "@/components/ui/card";
-import { useTheme } from '@/hooks/useTheme';
-import Navigation from '@/components/custom/navigation';
-import { HeroSection } from '@/components/custom/heroSection';
-import { FeatureShowcase } from '@/components/custom/featureSection';
-import { Footer } from '@/components/custom/footer';
+import { HeroSection } from '@/components/home/heroSection';
+import { FeatureShowcase } from '@/components/home/featureSection';
+import { Footer } from '@/components/home/footer';
+import Navigation from '@/components/home/navigation';
 
-const HomePage = () => {
-  const { theme, toggleTheme } = useTheme();
+interface HomePageProps {
+  theme: string;
+  toggleTheme: () => void;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ theme, toggleTheme }) => {
   return (
     <div className="bg-background">
-    <Navigation theme={theme} toggleTheme={toggleTheme} />
-     <HeroSection />
-     <FeatureShowcase /> 
-     <Footer />
+      <Navigation theme={theme} toggleTheme={toggleTheme} />
+      <HeroSection />
+      <FeatureShowcase />
+      <Footer />
     </div>
   );
 };
