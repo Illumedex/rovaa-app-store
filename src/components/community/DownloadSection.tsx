@@ -30,6 +30,7 @@ interface GitHubRelease {
 const owner = import.meta.env.VITE_GITHUB_OWNER;
 const repo = import.meta.env.VITE_GITHUB_REPO;
 const token = import.meta.env.VITE_GITHUB_TOKEN;
+const baseUrl = import.meta.env.VITE_BASE_URL;
 
 const APP_FEATURES = [
   {
@@ -145,7 +146,7 @@ const DownloadSection = () => {
             <div className="relative w-64 h-[500px] bg-black rounded-[3rem] p-3 shadow-2xl border-8 border-gray-800  hover:rotate-12 transition-transform duration-500">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-3xl z-10"></div>
               <img
-                src={phoneWallpaper}
+                src={`${baseUrl}${phoneWallpaper}`}
                 alt="App preview"
                 className="w-full h-full object-cover rounded-[2.25rem]"
               />

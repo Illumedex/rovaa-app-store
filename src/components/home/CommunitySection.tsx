@@ -1,8 +1,10 @@
+import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
 
 const CommunitySection = () => {
+    const navigator = useNavigate();
   return (
     <div className="py-20 px-6 max-w-7xl mx-auto">
       <Card className="bg-gradient-to-br from-secondary/30 via-secondary/20 to-background border-none overflow-hidden shadow-lg">
@@ -19,7 +21,7 @@ const CommunitySection = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                onClick={() => window.location.href = '/community'}
+                onClick={() => navigator('/community')}
               >
                 Explore Community
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
