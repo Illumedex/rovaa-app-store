@@ -1,5 +1,7 @@
-import { BookOpen, Moon, Sun, Github, Home,  Star, Info } from "lucide-react";
+import {  Moon, Sun, Github, Home,  Star, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {Avatar , AvatarImage , AvatarFallback} from "@/components/ui/avatar";
+import shadanda from "@/assets/shadanda.png";
 
 const Navigation = ({ 
   theme, 
@@ -22,7 +24,10 @@ const Navigation = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <BookOpen className="h-6 w-6 text-primary" />
+            <Avatar className= "h-8 w-8 ring-2 ring-primary/20 ring-offset-2" > 
+            <AvatarImage src={shadanda} alt="Shadanda logo" />
+            <AvatarFallback>Shadanda</AvatarFallback>
+            </Avatar>
             <span className="ml-2 text-xl font-bold">Shadanda</span>
           </div>
 

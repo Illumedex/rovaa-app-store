@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { BookOpen, Users2, Lightbulb } from "lucide-react";
-import gameDeepesh from "@/assets/gameDeepesh.png";
+import shadanda from "@/assets/shadanda.png";
 
 export const AboutSection = () => {
   return (
@@ -10,8 +10,8 @@ export const AboutSection = () => {
         <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-gradient-to-b from-background to-secondary/10">
           <div className="flex flex-col items-center text-center space-y-10">
             <div className="flex items-center gap-4">
-              <Avatar className="h-16 w-16 ring-2 ring-primary/20 ring-offset-2">
-                <AvatarImage src={gameDeepesh} alt="Creator" />
+              <Avatar className="h-24 w-24 ring-2 ring-primary/20 ring-offset-2">
+                <AvatarImage src={shadanda} alt="Creator" />
                 <AvatarFallback>DK</AvatarFallback>
               </Avatar>
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">

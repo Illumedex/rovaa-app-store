@@ -10,7 +10,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: 'https://shadanda-rovaa.vercel.app/',
   server: {
     host: '0.0.0.0',
     port: 3000,
